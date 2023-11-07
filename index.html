@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///C:/Users/User/Desktop/shalini.html/meter.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Unit Converter</title>
+    <style>
+      body{
+        background-size: cover;
+        background-image: url(https://th.bing.com/th?id=OIP.piPiMWb1gt5mCADdU1L3swAAAA&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2);
+      }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Unit Converter</h1>
+
+    <div>
+        <label>Millimeters (mm): </label>
+        <input type="number" id="mmInput">
+        <button onclick="convertMmToCm()">Convert to Centimeters (cm)</button>
+        <p id="cmResult"></p>
+    </div>
+
+    <div>
+        <label>Centimeters (cm): </label>
+        <input type="number" id="cmInput">
+        <button onclick="convertCmToM()">Convert to Meters (m)</button>
+        <p id="mResult"></p>
+    </div>
+
+    <div>
+        <label>Meters (m): </label>
+        <input type="number" id="mInput">
+        <button onclick="convertMToKm()">Convert to Kilometers (km)</button>
+        <p id="kmResult"></p>
+    </div>
+
+    <div>
+        <label>Kilometers (km): </label>
+        <input type="number" id="kmInput">
+        <button onclick="convertKmToMiles()">Convert to Miles (mi)</button>
+        <p id="milesResult"></p>
+    </div>
+</center>
+
+    <script>
+        function convertMmToCm() {
+            const mmInput = document.getElementById("mmInput").value;
+            const cmResult = mmInput * 0.1;
+            document.getElementById("cmResult").textContent = `${mmInput} mm = ${cmResult} cm`;
+        }
+
+        function convertCmToM() {
+            const cmInput = document.getElementById("cmInput").value;
+            const mResult = cmInput * 0.01;
+            document.getElementById("mResult").textContent = `${cmInput} cm = ${mResult} m`;
+        }
+
+        function convertMToKm() {
+            const mInput = document.getElementById("mInput").value;
+            const kmResult = mInput * 0.001;
+            document.getElementById("kmResult").textContent = `${mInput} m = ${kmResult} km`;
+        }
+
+        function convertKmToMiles() {
+            const kmInput = document.getElementById("kmInput").value;
+            const milesResult = kmInput * 0.621371;
+            document.getElementById("milesResult").textContent = `${kmInput} km ≈ ${milesResult} miles`;
+        }
+    </script>
+
+
+</body></html>
